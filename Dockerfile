@@ -16,4 +16,7 @@ RUN curl -o /tmp/vscode.deb -L https://go.microsoft.com/fwlink/?LinkID=760865
 RUN dpkg -i /tmp/vscode.deb && rm -f /tmp/vscode.deb
 COPY vscode /usr/bin
 
+# bower
+RUN npm install -g bower
+
 CMD /bin/bash
