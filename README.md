@@ -1,6 +1,6 @@
 # docker-vscode
 
-desktop development environment ( rdp, dotnet, vscode )
+docker-ubuntu + docker-dotnet + docker-rdp + desktop development environment ( vscode )
 
 ## build image
 
