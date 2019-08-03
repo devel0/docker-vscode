@@ -1,12 +1,11 @@
-FROM searchathing/rdp
+FROM searchathing/rdp:server-mgr
 
 # vscode prereq
-RUN apt-get install -y libnotify4 libnss3 libgconf-2-4 libsecret-1-0 libdbus-glib-1-2 gconf2-common libnspr4 libnss3-nssdb libsecret-common \
-	libgtk2.0-0 libxss1 libasound2
+#RUN apt-get install -y libnotify4 libnss3 libgconf-2-4 libsecret-1-0 libdbus-glib-1-2 gconf2-common libnspr4 libsecret-common \
+#	libgtk2.0-0 libxss1 libasound2
 
 # vscode
-RUN curl -o /tmp/vscode.deb -L https://go.microsoft.com/fwlink/?LinkID=760865
-RUN dpkg -i /tmp/vscode.deb && rm -f /tmp/vscode.deb
-COPY vscode /usr/bin
+COPY Downloads/code_1.36.1-1562627527_amd64.deb /tmp
+RUN dpkg -i /tmp/code_1.36.1-1562627527_amd64.deb && rm -f /tmp/code_1.36.1-1562627527_amd64.deb
 
 CMD /bin/bash
