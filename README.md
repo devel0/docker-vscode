@@ -5,6 +5,7 @@ docker-ubuntu + docker-dotnet + docker-rdp + desktop development environment ( v
 ## build image
 
 ```
+git checkout master
 ./build.sh
 ```
 
