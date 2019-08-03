@@ -14,10 +14,10 @@ docker-ubuntu + docker-dotnet + docker-rdp + desktop development environment ( v
 docker run -tid --name=mycode searchathing/vscode
 ```
 
-## set container root password
+## set container devel0 password
 
 ```
-docker exec -ti mycode passwd
+docker exec -ti mycode passwd devel0
 ```
 
 ## install rdp client
